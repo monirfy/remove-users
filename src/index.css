@@ -27,7 +27,11 @@ main {
   padding: 1.5rem 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
-
+.title {
+  padding-top: 0;
+  font-size: 2rem;
+  text-align: center;
+}
 .person {
   display: grid;
   grid-template-columns: auto 3fr 1fr;
@@ -35,6 +39,7 @@ main {
   margin-bottom: 1.5rem;
   align-items: center;
 }
+
 .person img {
   width: 75px;
   height: 75px;

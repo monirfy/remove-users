@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './App.css';
+import List from './List';
+import data from './data';
 
 const Lists = () => {
-  return <h2>Lists</h2>;
+  const [people, setPeople] = useState(data);
+  const removeItem = (id) => {
+    let newPeople = people.filter((person) => person.id !== id);
+    setPeople(newPeople);
+  };
+  return (
+    <section className='container'>
+      <h3 className='title'> {people.length} Users found</h3>
+      <List people={people} removeItem={removeItem}></List>
+      <button type='button' className='btn' onClick={() => setPeople([])}>
+        Remove All
+      </button>
+    </section>
+  );
 };
 
 export default Lists;
